@@ -16,13 +16,6 @@
       <a href="#about">About</a>
       <a href="#features">Features</a>
       <a href="#contact">Contact</a>
-      <div class="nav-auth" id="navAuth">
-        <button type="button" class="nav-link-btn" id="openLoginBtn">Log in</button>
-        <div class="user-menu" id="userMenu" hidden>
-          <span class="user-greeting" id="userGreeting"></span>
-          <button type="button" class="nav-link-btn" id="logoutBtn">Log out</button>
-        </div>
-      </div>
       <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <span class="theme-icon" aria-hidden="true">🌙</span>
       </button>
@@ -63,9 +56,6 @@
         <li>
           <strong>Light / dark</strong> — preference is remembered in your browser.
         </li>
-        <li>
-          <strong>Log in (demo)</strong> — front-end only; uses fixed demo credentials below.
-        </li>
       </ul>
     </section>
 
@@ -90,30 +80,6 @@
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> SimpleSite. Open the folder and open <code>index.html</code> in a browser.</p>
   </footer>
-
-  <dialog id="loginDialog" class="login-modal" aria-labelledby="loginTitle">
-    <div class="login-modal__inner">
-      <h2 id="loginTitle" class="login-modal__title">Log in</h2>
-      <p class="login-hint">
-        Demo account:
-        <code>demo@simplesite.test</code> · password <code>demo123</code>
-      </p>
-      <form id="loginForm" class="login-form" novalidate>
-        <label for="loginEmail">Email</label>
-        <input id="loginEmail" name="email" type="email" autocomplete="username" required placeholder="demo@simplesite.test">
-
-        <label for="loginPassword">Password</label>
-        <input id="loginPassword" name="password" type="password" autocomplete="current-password" required placeholder="••••••••">
-
-        <p class="login-error" id="loginError" role="alert" hidden></p>
-
-        <div class="login-actions">
-          <button type="button" class="btn btn-ghost" id="loginCancel">Cancel</button>
-          <button type="submit" class="btn btn-primary">Log in</button>
-        </div>
-      </form>
-    </div>
-  </dialog>
 
   <script src="script.js"></script>
 </body>
