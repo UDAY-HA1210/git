@@ -16,6 +16,11 @@
       <a href="#about">About</a>
       <a href="#features">Features</a>
       <a href="#contact">Contact</a>
+      <span class="user-pill" id="userPill" hidden>
+        Hi, <span id="userName"></span>
+      </span>
+      <button type="button" class="btn btn-ghost btn-sm" id="loginBtn">Log in</button>
+      <button type="button" class="btn btn-ghost btn-sm" id="logoutBtn" hidden>Log out</button>
       <button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
         <span class="theme-icon" aria-hidden="true">🌙</span>
       </button>
@@ -76,6 +81,26 @@
       </form>
     </section>
   </main>
+
+  <dialog class="modal" id="loginModal" aria-labelledby="loginTitle">
+    <form class="modal-card" id="loginForm" method="dialog" novalidate>
+      <div class="modal-head">
+        <h2 class="modal-title" id="loginTitle">Log in</h2>
+        <button class="icon-btn" type="button" id="loginCloseBtn" aria-label="Close">✕</button>
+      </div>
+
+      <p class="modal-subtitle">Demo login (stored only in your browser).</p>
+
+      <label for="loginEmail">Email</label>
+      <input id="loginEmail" name="email" type="email" autocomplete="email" required placeholder="you@example.com">
+
+      <label for="loginPassword">Password</label>
+      <input id="loginPassword" name="password" type="password" autocomplete="current-password" required minlength="4" placeholder="••••">
+
+      <button type="submit" class="btn btn-primary">Log in</button>
+      <p class="form-status" id="loginStatus" role="status" aria-live="polite"></p>
+    </form>
+  </dialog>
 
   <footer class="site-footer">
     <p>&copy; <span id="year"></span> SimpleSite. Open the folder and open <code>index.html</code> in a browser.</p>
